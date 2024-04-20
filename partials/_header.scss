@@ -12,7 +12,6 @@ i{
 }
 .header-icons{
     display: flex;
-    padding-left: 25px;
     gap: 14px;
 }
 .header-icons a:hover{
@@ -36,7 +35,38 @@ i{
     padding: 8px 24px;
     border-radius: 4px;
     background-color: transparent;
+    transition: background-color 0.8s;
 }
 .header-button a{
     color: $white-normal;
+}
+.header-button:hover{
+    border: 1px solid $red-light;
+    background-color: $red-light;
+}
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+@media screen and (max-width: 768px){
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        i{
+            margin-top: 16px;
+            font-size: 34px;
+        }
+    }
+    .header-logo img{
+        width: 160px;
+        margin-top: 46px;
+    }
+    .header-button{
+        display: none;
+    }
 }
