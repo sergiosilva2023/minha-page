@@ -40,8 +40,8 @@ i {
 .header-button {
   border: 1px solid #FFF;
   padding: 8px 24px;
-  border-radius: 4px;
-  background-color: transparent;
+  border-radius: 8px;
+  background-color: rgba(135, 133, 133, 0.5);
   transition: background-color 0.8s;
 }
 
@@ -83,6 +83,7 @@ i {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 8px;
 }
 
 .bg-home {
@@ -107,7 +108,7 @@ i {
 
 .hero {
   color: #FFF;
-  min-height: 80vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,12 +152,12 @@ i {
   .hero {
     min-height: 60vh;
   }
-  h1 {
+  .hero h1 {
     font-size: 34px;
     padding: 0 14px;
     width: 100%;
   }
-  p {
+  .hero p {
     font-size: 14px;
   }
 }
@@ -165,6 +166,135 @@ i {
     font-size: 24px;
   }
 }
+.about {
+  background-color: #06121e;
+  overflow: hidden;
+  color: #FFF;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 34px 14px 64px 14px;
+}
+.about-content img {
+  max-width: 100%;
+}
+
+.about-content div {
+  flex: 1;
+}
+
+.about-description h2 {
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+.about-description p {
+  margin-bottom: 14px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+.services {
+  background-color: #FFF;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.services-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.services-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.tipos-servico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 0 44px 34px 44px;
+}
+
+.servico {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+.servico img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.2s;
+}
+
+.servico img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.servico-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #FFF;
+  z-index: 99;
+}
+
+.servico-info button {
+  color: #FFF;
+  background-color: #d94140;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 0;
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  .tipos-servico {
+    flex-direction: column;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0;
+  gap: 24px;
+  color: #FFF;
+}
+.footer .img {
+  height: 120px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 8px;
+  color: #FFF;
+}
+
 body {
   font-family: "Sora", sans-serif;
   width: 100%;
