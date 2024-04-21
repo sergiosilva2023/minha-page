@@ -24,7 +24,7 @@
 }
 .hero{
     color: $white-normal;
-    min-height: 40vh;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,4 +210,65 @@
     display: flex;
     gap: 8px;
     color: $white-normal;
+}
+
+.footer-icons{
+    display: flex;
+    gap: 14px;
+}
+.footer-icons a:hover{
+    i{
+        animation: translateY 0.8s infinite alternate;
+        color: $red-light;
+    }
+}
+
+@keyframes translateY {
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+//--------------------
+// watsapp
+.btn-watsapp{
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 99;
+    img{
+        max-width: 74px;
+        transition: transform 0.4s;
+    }
+    img:hover{
+        transform: scale(1.1) ;
+    }
+}
+.btn-watsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 130px;
+    top: 4px;
+    left: -140px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: rgba(#000000, $alpha: 0.5);
+    color: $white-normal;
+    padding: 4px;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.btn-watsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+@media screen and (max-width: 768px){
+    .btn-watsapp{
+        img{
+            max-width: 64px;
+        }
+    }
 }
